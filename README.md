@@ -30,8 +30,11 @@ This project is a music recommendation system that generates personalized song s
    ```
 2. **How Do Use Input Based Recommendation App**
    1. Provide your favorite songs:
+  
        1. Enter songs in the format ARTIST - SONG in the input fields.
-   2. Get recommendations:
+
+   3. Get recommendations:
+
        2. Click the "Get Recommendations" button to view personalized song suggestions.
    
    
