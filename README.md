@@ -36,7 +36,16 @@ This project is a music recommendation system that generates personalized song s
    3. Get recommendations:
 
        2. Click the "Get Recommendations" button to view personalized song suggestions.
-   
-   
+
+## How our code works
+1. The process began by calculating the Jaccard similarity between the input user's listening history and the histories of all other users in the dataset. 
+2. Then we ranked users by how closely their song preferences matched the input user. 
+3. From these rankings, we selected the n (usually we set n=10) most similar users and aggregated their listening histories.
+4. Next, we counted how many of these n users had listened to each song. 
+5. To qualify as a recommendation, a song needed to have been played by at least n% of the most similar users, ensuring that the suggestions were popular within this group.
+6. Furthermore, we filtered out any songs that the input user had already listened to, ensuring that the recommendations were genuinely new and personalized. 
+7. The final list of recommended songs was sorted by popularity and limited to the top 10 results for relevance and simplicity. This method ensured that the recommendations were both meaningful and diverse, drawing from the collective preferences of similar users.
+
+
 
    
