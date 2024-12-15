@@ -4,6 +4,16 @@ from Utilities.song_to_id import song_to_id
 from Utilities.get_input import get_input
 from Recommenders.input_recommendations import input_recommendations as ir
 
+
+unique_tracks = pd.read_csv('unique_tracks.txt', sep='<SEP>', names=['track_id', 'song_id', 'artist_name', 'title'])
+train_triplets = pd.read_csv('train_triplets.txt', sep='\t', names=['user_id', 'song_id', 'play_count'])
+
+train_triplets_sorted = train_triplets.sort_values('user_id').head(1000000)
+merged_df = pd.merge(train_triplets_sorted, unique_tracks.drop_duplicates('song_id'), on='song_id', how='left')
+merged_df.to_csv('Data/merged_data.csv', index=False)
+
+
+
 merged_data = pd.read_csv('Data/merged_data.csv')
 
 st.title("Music Recommendation System")
