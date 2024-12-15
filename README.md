@@ -7,6 +7,10 @@ This project is a music recommendation system that generates personalized song s
 - Recommends up to 10 songs based on collaborative filtering.
 - Interactive interface built with **Streamlit**.
 
+## Data
+- For the User Listening History Data. Download the Triplets For 1M users dataset from http://millionsongdataset.com/tasteprofile/
+- For the Song Metadata. Download the list of tracks (3rd linked text) from http://millionsongdataset.com/blog/12-1-2-matching-errors-taste-profile-and-msd/
+
 ## Installation
 
 1. **Clone the repository**:
